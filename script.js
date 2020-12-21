@@ -300,6 +300,34 @@
 // Lu lines end
 // Charles has lines 301 - 600
 
+// variables go here
+
+// Rendered Buttons will go Here
+
+// Button triggers here
+
+// Food APIs here
+
+// intial array of proteins
+    // array of grains
+    // array of veggies
+
+// displayRecipeInfo function re-renders to HTML to dislay content
+
+// creating AJAX call for the specific protein button being clicked.
+
+// creating AJAX call for the movie.
+
+// creating a div to hold the recipe.
+// ceating a div to hold the movie. 
+
+
+
+
+
+
+
+ 
 
 
 
