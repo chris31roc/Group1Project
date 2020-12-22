@@ -339,8 +339,8 @@ getRecipe();
 
 function getMovie() {
 
-    var movieGenre = "romance";
-    var queryURL = "https://www.omdbapi.com/?t=" + movieGenre + "&apikey=AIzaSyA802uGbmk6cnyJZtGgJoPjrdb0wRL-FmI";
+    var movie = "romance";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=AIzaSyA802uGbmk6cnyJZtGgJoPjrdb0wRL-FmI";
 
     $.ajax({
         url: queryURL,
