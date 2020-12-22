@@ -334,7 +334,7 @@ getRecipe();
 // creating AJAX call for the movie.
 
 // creating a div to hold the recipe.
-// ceating a div to hold the movie. 
+// creating a div to hold the movie. 
 
 
 function getMovie() {
@@ -348,6 +348,7 @@ function getMovie() {
     }).then(function (response) {
 
         console.log(response)
+        var movieDiv = $("<div class='movie'>");
     })
 
 };
