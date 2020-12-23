@@ -1,12 +1,17 @@
 // Lu has lines 1 - 300
 
+//create variable
+var recipe;
+var movie;
+
 //create a get recipe function 
 
 function getRecipe() {
 
     var protein = "chicken";
-    var grain = "potato"
-    var queryURL = "https://api.edamam.com/search?q=" + protein + "&" + grain + "&app_id=64c826ae&app_key=e07cf4a17fede26c2683f3da76fc456e"
+    var grain = "rice"
+    var veggie = "green beans"
+    var queryURL = "https://api.edamam.com/search?q=" + protein + "+" + grain + "+" + veggie + "&app_id=64c826ae&app_key=e07cf4a17fede26c2683f3da76fc456e"
 
     $.ajax({
         url: queryURL,
