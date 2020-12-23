@@ -315,6 +315,50 @@ getRecipe();
 // Lu lines end
 // Charles has lines 301 - 600
 
+// variables go here
+
+// Rendered Buttons will go Here
+
+// Button triggers here
+
+// Food APIs here
+
+// intial array of proteins
+    // array of grains
+    // array of veggies
+
+// displayRecipeInfo function re-renders to HTML to dislay content
+
+// creating AJAX call for the specific protein button being clicked.
+
+// creating AJAX call for the movie.
+
+// creating a div to hold the recipe.
+// creating a div to hold the movie. 
+
+
+function getMovie() {
+
+    var movie = "romance";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=AIzaSyA802uGbmk6cnyJZtGgJoPjrdb0wRL-FmI";
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+
+        console.log(response)
+        var movieDiv = $("<div class='movie'>");
+    })
+
+};
+
+getMovie();
+
+
+
+
+ 
 
 
 
