@@ -7,9 +7,8 @@ var protein;
 var vegetable;
 
 //create a get recipe function 
-$("#uk-button").on("click", function (event) {
+$(".uk-button").on("click", function (event) {
     event.preventDefault();
-
     var protein = $(this).attr("id");
     console.log(protein);
 
@@ -317,16 +316,16 @@ $("#uk-button").on("click", function (event) {
 
 function getMovie() {
 
-    var movie = ["Titanic","Inception","The + Departed","Catch+Me+If+You+Can","Gangs+Of+New+York","The+Aviator","Django+Unchained","Revolutionary+Road","The+Wolf+of+Wall+Street","This+Boy's+Life","Shutter+Island","The+Beach","Romeo+Juliet","What's+Eating+Gilbert+Grape","The+Revenant","Celebrity","The+Great+Gatsby","The+Quick+and+the+Dead","Blood+Diamond","The+Basketball+Diaries"]  ;
+    var movie = ["Titanic", "Inception", "The + Departed", "Catch+Me+If+You+Can", "Gangs+Of+New+York", "The+Aviator", "Django+Unchained", "Revolutionary+Road", "The+Wolf+of+Wall+Street", "This+Boy's+Life", "Shutter+Island", "The+Beach", "Romeo+Juliet", "What's+Eating+Gilbert+Grape", "The+Revenant", "Celebrity", "The+Great+Gatsby", "The+Quick+and+the+Dead", "Blood+Diamond", "The+Basketball+Diaries"];
     var randomMovie = Math.floor(Math.random() * movie.length);
     var queryURL = "https://www.omdbapi.com/?t=" + randomMovie + "&apikey=3e0d88fc";
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (result) {    
+    }).then(function (result) {
         console.log(result)
-        
+
         var movieDiv = $("<div class='moviesBtn'>");
         console.log(movieDiv)
     })
