@@ -326,7 +326,7 @@ function getMovie() {
     }).then(function (response) {
 
         console.log(response)
-        var movieDiv = $("<div class='movie'>");
+        var movieDiv = $("<div class='moviesBtn'>");
     })
 
 };
