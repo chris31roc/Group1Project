@@ -344,16 +344,18 @@ getRecipe();
 
 function getMovie() {
 
-    var movie = "romance";
-    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=AIzaSyA802uGbmk6cnyJZtGgJoPjrdb0wRL-FmI";
+    var movie = ["Titanic","Inception","The + Departed","Catch+Me+If+You+Can","Gangs+Of+New+York","The+Aviator","Django+Unchained","Revolutionary+Road","The+Wolf+of+Wall+Street","This+Boy's+Life","Shutter+Island","The+Beach","Romeo+Juliet","What's+Eating+Gilbert+Grape","The+Revenant","Celebrity","The+Great+Gatsby","The+Quick+and+the+Dead","Blood+Diamond","The+Basketball+Diaries"]  ;
+    var randomMovie = Math.floor(Math.random() * movie.length);
+    var queryURL = "https://www.omdbapi.com/?t=" + randomMovie + "&apikey=3e0d88fc";
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
-
-        console.log(response)
+    }).then(function (result) {    
+        console.log(result)
+        
         var movieDiv = $("<div class='moviesBtn'>");
+        console.log(movieDiv)
     })
 
 };
