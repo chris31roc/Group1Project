@@ -1,21 +1,18 @@
 // Lu has lines 1 - 300
-
 //create variable
 var recipe;
 var movie;
 
+var protein;
+var vegetable;
+
 //create a get recipe function 
-$("#button").on("click", function (event) {
+$("#uk-button").on("click", function (event) {
     event.preventDefault();
-    getRecipe();
-});
 
+    var protein = $(this).attr("id");
+    console.log(protein);
 
-function getRecipe() {
-    var protein = $("#chicken").text();
-    //var protein = "chicken";
-    // var grain = "rice"
-    // var veggie = "green beans"
     var queryURL = "https://api.edamam.com/search?q=" + protein + "&app_id=64c826ae&app_key=e07cf4a17fede26c2683f3da76fc456e"
 
     $.ajax({
@@ -25,17 +22,9 @@ function getRecipe() {
 
         console.log(response)
 
-
-
-
-
-
-
     })
+});
 
-};
-
-getRecipe();
 
 
 
