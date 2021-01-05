@@ -31,10 +31,11 @@ $(".uk-button").on("click", function (event) {
         method: "GET"
     }).then(function (response) {
         console.log(response)
+        //  response = Math.floor((Math.random() * 10));
         for (i = 0; i < 3; i++) {
 
             $(".name").each(function (i) {
-                $(this).text("Recipe " + response.hits[i + 1].recipe.label)
+                $(this).text(response.hits[i + 1].recipe.label)
             });
 
             $('.pic').each(function (i) {
@@ -47,7 +48,7 @@ $(".uk-button").on("click", function (event) {
 
 
             $(".link").each(function (i) {
-                $(this).text("Go to the recipe").prop("href", response.hits[i + 1].recipe.url)
+                $(this).prop("href", response.hits[i + 1].recipe.url)
             });
 
         }
