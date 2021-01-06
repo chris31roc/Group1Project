@@ -8,7 +8,7 @@ var vegetable = "";
 var grains = "";
 
 //create a get recipe function 
-$(".uk-button").on("click", function (event) {
+$(".food").on("click", function (event) {
     event.preventDefault();
     if ($(this).attr("data-name") === "meat") {
         protein = $(this).attr("id")
