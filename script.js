@@ -1,7 +1,7 @@
 // Lu has lines 1 - 300
 //create variable
 var recipe;
-var movie;
+
 
 var protein = "";
 var vegetable = "";
@@ -345,25 +345,61 @@ $(".food").on("click", function (event) {
 // creating a div to hold the movie. 
 
 
-function getMovie() {
-
-    var movie = ["Titanic", "Inception", "The + Departed", "Catch+Me+If+You+Can", "Gangs+Of+New+York", "The+Aviator", "Django+Unchained", "Revolutionary+Road", "The+Wolf+of+Wall+Street", "This+Boy's+Life", "Shutter+Island", "The+Beach", "Romeo+Juliet", "What's+Eating+Gilbert+Grape", "The+Revenant", "Celebrity", "The+Great+Gatsby", "The+Quick+and+the+Dead", "Blood+Diamond", "The+Basketball+Diaries"];
-    var randomMovie = Math.floor(Math.random() * movie.length);
+// function getMovie() {
+    $("#movies").on("click", function (event) {
+    var movie = ["Titanic", "Inception", "The + Departed", "Catch+Me+If+You+Can", "Gangs+Of+New+York", "The+Aviator"];
+    var movieTwo = ["Django+Unchained", "Revolutionary+Road", "The+Wolf+of+Wall+Street", "This+Boy's+Life", "Shutter+Island", "The+Beach"];
+    var movieThree = ["Romeo+Juliet", "What's+Eating+Gilbert+Grape", "The+Revenant", "Celebrity", "The+Great+Gatsby", "The+Quick+and+the+Dead", "Blood+Diamond", "The+Basketball+Diaries"]
+    var randomMovie = movie[Math.floor(Math.random() * 6)];
+    var randomMovieTwo = movie[Math.floor(Math.random() * 6)];
+    var randomMovieThree = movie[Math.floor(Math.random() * 8)];
     var queryURL = "https://www.omdbapi.com/?t=" + randomMovie + "&apikey=3e0d88fc";
-
+    var queryURLTwo = "https://www.omdbapi.com/?t=" + randomMovieTwo + "&apikey=3e0d88fc";
+    var queryURLThree = "https://www.omdbapi.com/?t=" + randomMovieThree + "&apikey=3e0d88fc";
+    // console.log(randomMovie);
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (result) {
-        console.log(result)
+        // console.log(result)
+        for (i = 0; i < 3; i++){
 
-        var movieDiv = $("<div class='moviesBtn'>");
-        console.log(movieDiv)
-    })
+        // var movieDiv = $("<div class='moviesBtn'>");
+        
+        $(".title").text(result.Title)
+        $(".poster").attr("src", result.Poster)
+        $(".plot").text(result.Plot)
+    };
+    });
+    $.ajax({
+        url: queryURLTwo,
+        method: "GET"
+    }).then(function (resultTwo) {
+        for (i = 0; i < 3; i++){
 
-};
+        // var movieDiv = $("<div class='moviesBtn'>");
+        
+        $(".titleTwo").text(resultTwo.Title)
+        $(".posterTwo").attr("src", resultTwo.Poster)
+        $(".plotTwo").text(resultTwo.Plot)
+    };
+    });
+    $.ajax({
+        url: queryURLThree,
+        method: "GET"
+    }).then(function (resultThree) {
+        for (i = 0; i < 3; i++){
 
-getMovie();
+        // var movieDiv = $("<div class='moviesBtn'>");
+        
+        $(".titleThree").text(resultThree.Title)
+        $(".posterThree").attr("src", resultThree.Poster)
+        $(".plotThree").text(resultThree.Plot)
+    };
+    });
+});
+
+
 
 
 
