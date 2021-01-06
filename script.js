@@ -3,24 +3,55 @@
 var recipe;
 var movie;
 
-var protein;
-var vegetable;
+var protein = "";
+var vegetable = "";
+var grains = "";
 
 //create a get recipe function 
 $(".uk-button").on("click", function (event) {
     event.preventDefault();
-    var protein = $(this).attr("id");
+    if ($(this).attr("data-name") === "meat") {
+        protein = $(this).attr("id")
+        $(".meat").prop('disabled', true)
+    } else if ($(this).attr("data-name") === "vegetable") {
+        vegetable = $(this).attr("id")
+        $(".vegetable").prop('disabled', true)
+    } else {
+        grains = $(this).attr("id")
+        $(".grain").prop('disabled', true)
+    }
+
     console.log(protein);
 
-    var queryURL = "https://api.edamam.com/search?q=" + protein + "&app_id=64c826ae&app_key=e07cf4a17fede26c2683f3da76fc456e"
+
+    var queryURL = "https://api.edamam.com/search?q=" + protein + "+" + vegetable + "+" + grains + "&app_id=64c826ae&app_key=e07cf4a17fede26c2683f3da76fc456e"
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-
         console.log(response)
+        //  response = Math.floor((Math.random() * 10));
+        for (i = 0; i < 3; i++) {
 
+            $(".name").each(function (i) {
+                $(this).text(response.hits[i + 1].recipe.label)
+            });
+
+            $('.pic').each(function (i) {
+                $(this).attr("src", response.hits[i + 1].recipe.image);
+            });
+
+            $(".healthLabel").each(function (i) {
+                $(this).text(response.hits[i + 1].recipe.healthLabels)
+            });
+
+
+            $(".link").each(function (i) {
+                $(this).prop("href", response.hits[i + 1].recipe.url)
+            });
+
+        }
     })
 });
 
