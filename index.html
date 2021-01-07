@@ -14,20 +14,14 @@
 <body>
 
     <!-- Navbar goes here -->
-
     <nav>
         <div class="nav-wrapper">
             <p class="brand-logo center">Food N' Film</p>
-            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
-            </ul> -->
         </div>
     </nav>
+    <br>
 
     <!-- slider goes here -->
-
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
         <ul class="uk-slider-items uk-child-width-1-2@s  uk-child-width-1-3@m uk-grid uk-child-width-1-4@m">
             <li>
@@ -63,9 +57,10 @@
             uk-slider-item="next"></a>
 
     </div>
-
     <br>
+
     <!-- Page Layout here -->
+    <!-- user story -->
     <div class="uk-container">
         <h3 class="center">Cook with what you have in the fridge</h3>
         <p>Have you ever thought to yourself, “what am I going to eat for dinner?”, and or “what am I going to watch?”
@@ -81,49 +76,69 @@
             will be
             paired with the meal!</p>
     </div>
+    <br>
+    <br>
+    <br>
+
     <div class="row center">
-        <!-- <div class="col s12 m4 l5"> -->
+        <!-- recipe button for different ingredients -->
         <div class="row">
             <button class="uk-button uk-button-primary  uk-button-small meat food" class="chickenBtn" data-name="meat"
-                id="chicken">Chicken</button>
+                id="chicken"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">Chicken</button>
             <button class="uk-button uk-button-primary  uk-button-small meat food" class="beefBtn" data-name="meat"
-                id="beef">Beef</button>
+                id="beef"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">Beef</button>
             <button class="uk-button uk-button-primary  uk-button-small meat food" class="lambBtn" data-name="meat"
-                id="lamb">Lamb</button>
+                id="lamb"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">Lamb</button>
             <button class="uk-button uk-button-primary  uk-button-small meat food" class="fishBtn" data-name="meat"
-                id="fish">Fish</button>
+                id="fish"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">Fish</button>
         </div>
         <div class="row">
             <button class="uk-button uk-button-primary  uk-button-small vegetable food" class="broccoliBtn"
-                data-name="vegetable" id="broccoli ">broccoli </button>
+                data-name="vegetable" id="broccoli "
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">broccoli
+            </button>
             <button class="uk-button uk-button-primary  uk-button-small vegetable food" class="carrotsBtn"
-                data-name="vegetable" id="carrots">carrots</button>
+                data-name="vegetable" id="carrots"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">carrots</button>
             <button class="uk-button uk-button-primary  uk-button-small vegetable food" class="tomatoBtn"
-                data-name="vegetable" id="tomatoe">Tomato</button>
+                data-name="vegetable" id="tomatoe"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">Tomato</button>
             <button class="uk-button uk-button-primary  uk-button-small vegetable food" class="onionBtn"
-                data-name="vegetable" id="onion">Onion</button>
+                data-name="vegetable" id="onion"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">Onion</button>
         </div>
         <div class="row">
             <button class="uk-button uk-button-primary  uk-button-small grain food" class="potatoBtn" data-name="grains"
-                id="potato">potato</button>
+                id="potato"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">potato</button>
             <button class="uk-button uk-button-primary  uk-button-small grain food" class="riceBtn" data-name="grains"
-                id="rice">rice</button>
+                id="rice"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">rice</button>
             <button class="uk-button uk-button-primary  uk-button-small grain food" class="quinoaBtn" data-name="grains"
-                id="quinoa">Quinoa</button>
+                id="quinoa"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">Quinoa</button>
             <button class="uk-button uk-button-primary  uk-button-small grain food" class="pastaBtn" data-name="grains"
-                id="pasta">pasta</button>
+                id="pasta"
+                style="border-radius: 12px; background-color: #F9A124; background-image: -webkit-linear-gradient(top, #FBB450, #F89406); background-image: linear-gradient(to bottom, #FBB450, #F89406);">pasta</button>
         </div>
-        <div class="row">
-        <button class="uk-button uk-button-primary uk-button-movie"
-        class="moviesBtn" data-name="movies"
-            id="movies">Movie Recommendation</button>
-        </div>
-        
+        <br>
 
-        <!-- </div> -->
+        <!-- movie button -->
+        <div class="row">
+            <button class="uk-button uk-button-danger uk-button-movie" class="moviesBtn" data-name="movies" id="movies"
+                style="border-radius: 12px;">Movie Recommendation</button>
+        </div>
+
+        <br>
+        <br>
+
 
         <div class="col s12 m12 l12">
-            <!-- <recipe & film recommendation go here-->
+            <!-- <recipe recommendation goes here-->
 
             <div class="col s12 m8 l4">
                 <div class="col-md-12 recipe">
@@ -131,7 +146,6 @@
                     <a class="link" href="" target="_blank">
                         <img class="pic" src="" alt="">
                     </a>
-                    <p class="card-text healthLabel"></p>
                 </div>
             </div>
 
@@ -141,7 +155,6 @@
                     <a class="link" href="" target="_blank">
                         <img class="pic" src="" alt="">
                     </a>
-                    <p class="card-text healthLabel"></p>
                 </div>
             </div>
 
@@ -151,27 +164,28 @@
                     <a class="link" href="" target="_blank">
                         <img class="pic" src="" alt="">
                     </a>
-                    <p class="card-text healthLabel"></p>
                 </div>
             </div>
+
+            <!-- <movie recommendation goes here-->
             <div class="col s12 m8 l4">
                 <div class="col-md-12">
                     <h4 class="card-text title"></h4>
-                        <img class="poster" src="" alt="">
+                    <img class="poster" src="" alt="">
                     <p class="card-text plot"></p>
                 </div>
             </div>
             <div class="col s12 m8 l4">
                 <div class="col-md-12">
                     <h4 class="card-text titleTwo"></h4>
-                        <img class="posterTwo" src="" alt="">
+                    <img class="posterTwo" src="" alt="">
                     <p class="card-text plotTwo"></p>
                 </div>
             </div>
             <div class="col s12 m8 l4">
                 <div class="col-md-12">
                     <h4 class="card-text titleThree"></h4>
-                        <img class="posterThree" src="" alt="">
+                    <img class="posterThree" src="" alt="">
                     <p class="card-text plotThree"></p>
                 </div>
             </div>
