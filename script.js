@@ -1,8 +1,6 @@
 // Lu has lines 1 - 300
 //create variable
 var recipe;
-
-
 var protein = "";
 var vegetable = "";
 var grains = "";
@@ -23,7 +21,7 @@ $(".food").on("click", function (event) {
 
     console.log(protein);
 
-
+    //ajax call get recipe
     var queryURL = "https://api.edamam.com/search?q=" + protein + "+" + vegetable + "+" + grains + "&app_id=64c826ae&app_key=e07cf4a17fede26c2683f3da76fc456e"
 
     $.ajax({
@@ -42,9 +40,9 @@ $(".food").on("click", function (event) {
                 $(this).attr("src", response.hits[i + 1].recipe.image);
             });
 
-            $(".healthLabel").each(function (i) {
-                $(this).text(response.hits[i + 1].recipe.healthLabels)
-            });
+            // $(".healthLabel").each(function (i) {
+            //     $(this).text(response.hits[i + 1].recipe.healthLabels)
+            // });
 
 
             $(".link").each(function (i) {
